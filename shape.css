@@ -1,8 +1,13 @@
+/* Import Compass CSS3 module */
+
 @import "compass/css3";
+
+/* Define variables for colors */
 
 $body-background: #f5efe6;
 $color-class-a-plus-plus: #396433;
 $color-class-a-plus: #669e4c;
+$color-class-a: #afbe00;
 $color-class-b: #f9ec46;
 $color-class-c: #f9d956;
 $color-class-d: #e5761e;
@@ -11,10 +16,15 @@ $color-class-f: #c41017;
 $color-class-g: #ae2a25;
 $color-class-x: #000000;
 
+/* Apply styles to the body */
+
 body {
   padding: 3em;
   background: $body-background;
 }
+
+/* Apply styles to h2 elements */
+
 h2 {
     font: {
       family: 'Trebuchet MS', Arial, sans-serif;
@@ -23,20 +33,18 @@ h2 {
     color: #000000;
 }
 
+/* Define a placeholder for common styles of quality indicator boxes */
 
 %qualityClasses {
     position: relative;
-    display: block;
-    
+    display: block;    
     height: 18px;
-    @include box-sizing('border-box');
-    
+    @include box-sizing('border-box');    
     margin: {
         top: 2px;
         bottom: 2px;
     }
-    padding-left: 3px; 
-    
+    padding-left: 3px;     
     line-height: 18px;
     color: #fff;
     font: {
@@ -44,43 +52,37 @@ h2 {
         size: 14px;
         weight: 700;
     }
-    
+    /* Style the after pseudo-element */  
     &::after {
-        content:"";
-        
+        content:"";        
         position:absolute;
-        left:100%;
-        
+        left:100%;        
         border:9px solid transparent;
         border-left:9px solid #fbb900;
     }
-	
+    /* Style the before pseudo-element */	
 	&::before {
-    	content: "";
-		
+    	content: "";		
     	position: absolute;
-    	left: -18px;
-		
+    	left: -18px;		
     	border: 9px solid transparent;
     	border-right: 9px solid #fbb900;
 	}
-    
+    /* Position the superscript element */    
     & > sup {
         position: absolute;
         top: -3px;
     }
 }
+
+/* Apply the quality classes to different indicators */
+
 .classAPlusPlus {
-    @extend %qualityClasses;
-     
-    width: 30px;
-    
+    @extend %qualityClasses;     
+    width: 30px;    
     background-color: $color-class-a-plus-plus;
     border-color: $color-class-a-plus-plus;
-	
-	// Existing styles
-    display: inline-block; // Ensure classAPlusPlus is displayed inline-block
-   
+	display: inline-block; // Ensure classAPlusPlus is displayed inline-block
     &::after {
         border-left-color: $color-class-a-plus-plus; 
     }
@@ -90,13 +92,10 @@ h2 {
 }
 
 .classAPlus {
-    @extend %qualityClasses;
-  
-    width: 37px;
-    
+    @extend %qualityClasses;  
+    width: 37px;    
     background-color: $color-class-a-plus;
-    border-color: $color-class-a-plus;
-   
+    border-color: $color-class-a-plus;   
     &::after {
         border-left-color: $color-class-a-plus; 
     }
@@ -106,14 +105,10 @@ h2 {
 }
 
 .classA {
-    @extend %qualityClasses;
-    $color-class-a: #afbe00;
-    
-    width:44px;
-    
+    @extend %qualityClasses;        
+    width:44px;    
     background-color: $color-class-a;
-    border-color: $color-class-a;
-   
+    border-color: $color-class-a;   
     &::after {
         border-left-color: $color-class-a; 
     }
@@ -124,12 +119,9 @@ h2 {
 
 .classB {
     @extend %qualityClasses;
-    
-    width:51px;
-    
+    width:51px;    
     background-color: $color-class-b;
-    border-color: $color-class-b;
-   
+    border-color: $color-class-b;   
     &::after {
         border-left-color: $color-class-b; 
     }
@@ -139,13 +131,10 @@ h2 {
 }
 
 .classC {
-    @extend %qualityClasses;
-    
-    width:58px;
-    
+    @extend %qualityClasses;    
+    width:58px;    
     background-color: $color-class-c;
-    border-color: $color-class-c;
-   
+    border-color: $color-class-c;   
     &::after {
         border-left-color: $color-class-c; 
     }
@@ -155,13 +144,10 @@ h2 {
 }
 
 .classD {
-    @extend %qualityClasses;
-    
-    width:65px;
-    
+    @extend %qualityClasses;    
+    width:65px;    
     background-color: $color-class-d;
-    border-color: $color-class-d;
-   
+    border-color: $color-class-d;   
     &::after {
         border-left-color: $color-class-d; 
     }
@@ -171,13 +157,10 @@ h2 {
 }
 
 .classE {
-    @extend %qualityClasses;
-    
-    width:72px;
-    
+    @extend %qualityClasses;    
+    width:72px;    
     background-color: $color-class-e;
-    border-color: $color-class-e;
-   
+    border-color: $color-class-e;   
     &::after {
         border-left-color: $color-class-e; 
     }
@@ -187,13 +170,10 @@ h2 {
 }
 
 .classF {
-    @extend %qualityClasses;
-    
-    width:79px;
-    
+    @extend %qualityClasses;    
+    width:79px;    
     background-color: $color-class-f;
-    border-color: $color-class-f;
-   
+    border-color: $color-class-f;   
     &::after {
         border-left-color: $color-class-f; 
     }
@@ -203,13 +183,10 @@ h2 {
 }
 
 .classG {
-    @extend %qualityClasses;
-    
-    width:86px;
-    
+    @extend %qualityClasses;    
+    width:86px;    
     background-color: $color-class-g;
-    border-color: $color-class-g;
-   
+    border-color: $color-class-g;   
     &::after {
         border-left-color: $color-class-g; 
     }
@@ -219,14 +196,10 @@ h2 {
 }
 
 .classX {
-    @extend %qualityClasses;
-    
-    width: 30px;
-    
-    background-color: $color-class-x;
-    
-    display: inline-block;
-	
+    @extend %qualityClasses;    
+    width: 30px;    
+    background-color: $color-class-x;    
+    display: inline-block;	
     &::after {
         border-left-color: $body-background;
     }
