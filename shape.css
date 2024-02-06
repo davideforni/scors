@@ -220,19 +220,14 @@ h2 {
 .classX {
     @extend %qualityClasses;
     
-    width: 30px; // Adjust the width as needed
+    width: 30px;
     
-    background-color: #000000; // Set the desired background color
+    background-color: #000000;
     
-    // Set the distance from classAPlusPlus
-    margin-left: 100px; // Adjust the distance from classAPlusPlus
-    // Adjust the margin-left value according to your specific distance requirement
-    
-	// Set display to inline-block to appear on the same line
     display: inline-block;
 	
     &::after {
-        border-left-color: $body-background; // Match the background color
+        border-left-color: $body-background;
     }
 	&::before {
 		border-right-color: #000000;
@@ -240,5 +235,5 @@ h2 {
 }
     
 .classAPlusPlus + .classX {
-    margin-left: 100px; // Adjust the distance between classAPlusPlus and classH
+    margin-left: 86px; // Adjust the distance between classAPlusPlus and classH
 }
