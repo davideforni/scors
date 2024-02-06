@@ -211,3 +211,82 @@ h2 {
 .classAPlusPlus + .classX {
     margin-left: 86px; // Adjust the distance between classAPlusPlus and classH
 }
+
+/* Add the container of the vertical line and tick marks */
+
+.vertical-line-with-ticks {
+    position: relative;
+    width: 2px; /* Adjust the width of the line */
+    height: 182px; /* Adjust the height of the line */
+    background-color: black; /* Adjust the color of the line */
+}
+
+.vertical-line-with-ticks::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    transform: translateX(-65%) rotate(45deg); /* Adjust rotation as needed */
+    border: solid black;
+    border-width: 0 2px 2px 0; /* Adjust arrow size */
+    width: 5px; /* Adjust arrow width */
+    height: 5px; /* Adjust arrow height */
+}
+
+/* Style the vertical line and tick marks */
+
+.tick {
+    position: absolute;
+    right: 100%; /* Adjust the position of the tick marks */
+    width: 5px; /* Adjust the width of the tick marks */
+    height: 2px; /* Adjust the height of the tick marks */
+    background-color: black; /* Adjust the color of the tick marks */
+}
+
+.tick::after {
+    content: attr(data-label);
+    position: absolute;
+    top: -5px; /* Adjust the position of the label */
+    right: 10px; /* Adjust the position of the label */
+	font: {
+        family: Arial, sans-serif;
+        size: 12px;
+        weight: 350;
+    }
+}
+
+.tick:nth-child(1) {
+    bottom: 180px;
+}
+
+.tick:nth-child(2) {
+    bottom: 160px;
+}
+
+.tick:nth-child(3) {
+    bottom: 140px;
+}
+
+.tick:nth-child(4) {
+    bottom: 120px;
+}
+
+.tick:nth-child(5) {
+    bottom: 100px;
+}
+
+.tick:nth-child(6) {
+    bottom: 80px;
+}
+
+.tick:nth-child(7) {
+    bottom: 60px;
+}
+
+.tick:nth-child(8) {
+    bottom: 40px;
+}
+
+.tick:nth-child(9) {
+    bottom: 20px;
+}
