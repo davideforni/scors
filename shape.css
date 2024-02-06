@@ -9,6 +9,7 @@ $color-class-d: #e5761e;
 $color-class-e: #dc242e;
 $color-class-f: #c41017;
 $color-class-g: #ae2a25;
+$color-class-x: #000000;
 
 body {
   padding: 3em;
@@ -19,7 +20,7 @@ h2 {
       family: 'Trebuchet MS', Arial, sans-serif;
       size: 28px;
     }
-    color: #ccc;
+    color: #000000;
 }
 
 
@@ -222,7 +223,7 @@ h2 {
     
     width: 30px;
     
-    background-color: #000000;
+    background-color: $color-class-x;
     
     display: inline-block;
 	
@@ -230,7 +231,7 @@ h2 {
         border-left-color: $body-background;
     }
 	&::before {
-		border-right-color: #000000;
+		border-right-color: $color-class-x;
 	}
 }
     
