@@ -1,0 +1,244 @@
+@import "compass/css3";
+
+$body-background: #f5efe6;
+$color-class-a-plus-plus: #396433;
+$color-class-a-plus: #669e4c;
+$color-class-b: #f9ec46;
+$color-class-c: #f9d956;
+$color-class-d: #e5761e;
+$color-class-e: #dc242e;
+$color-class-f: #c41017;
+$color-class-g: #ae2a25;
+
+body {
+  padding: 3em;
+  background: $body-background;
+}
+h2 {
+    font: {
+      family: 'Trebuchet MS', Arial, sans-serif;
+      size: 28px;
+    }
+    color: #ccc;
+}
+
+
+%qualityClasses {
+    position: relative;
+    display: block;
+    
+    height: 18px;
+    @include box-sizing('border-box');
+    
+    margin: {
+        top: 2px;
+        bottom: 2px;
+    }
+    padding-left: 3px; 
+    
+    line-height: 18px;
+    color: #fff;
+    font: {
+        family: Arial, sans-serif;
+        size: 14px;
+        weight: 700;
+    }
+    
+    &::after {
+        content:"";
+        
+        position:absolute;
+        left:100%;
+        
+        border:9px solid transparent;
+        border-left:9px solid #fbb900;
+    }
+	
+	&::before {
+    	content: "";
+		
+    	position: absolute;
+    	left: -18px;
+		
+    	border: 9px solid transparent;
+    	border-right: 9px solid #fbb900;
+	}
+    
+    & > sup {
+        position: absolute;
+        top: -3px;
+    }
+}
+.classAPlusPlus {
+    @extend %qualityClasses;
+     
+    width: 30px;
+    
+    background-color: $color-class-a-plus-plus;
+    border-color: $color-class-a-plus-plus;
+	
+	// Existing styles
+    display: inline-block; // Ensure classAPlusPlus is displayed inline-block
+   
+    &::after {
+        border-left-color: $color-class-a-plus-plus; 
+    }
+    &::before {
+		border-right-color: $body-background;
+	}
+}
+
+.classAPlus {
+    @extend %qualityClasses;
+  
+    width: 37px;
+    
+    background-color: $color-class-a-plus;
+    border-color: $color-class-a-plus;
+   
+    &::after {
+        border-left-color: $color-class-a-plus; 
+    }
+	&::before {
+		border-right-color: $body-background;
+	}
+}
+
+.classA {
+    @extend %qualityClasses;
+    $color-class-a: #afbe00;
+    
+    width:44px;
+    
+    background-color: $color-class-a;
+    border-color: $color-class-a;
+   
+    &::after {
+        border-left-color: $color-class-a; 
+    }
+	&::before {
+		border-right-color: $body-background;
+	}
+}
+
+.classB {
+    @extend %qualityClasses;
+    
+    width:51px;
+    
+    background-color: $color-class-b;
+    border-color: $color-class-b;
+   
+    &::after {
+        border-left-color: $color-class-b; 
+    }
+	&::before {
+		border-right-color: $body-background;
+	}
+}
+
+.classC {
+    @extend %qualityClasses;
+    
+    width:58px;
+    
+    background-color: $color-class-c;
+    border-color: $color-class-c;
+   
+    &::after {
+        border-left-color: $color-class-c; 
+    }
+	&::before {
+		border-right-color: $body-background;
+	}
+}
+
+.classD {
+    @extend %qualityClasses;
+    
+    width:65px;
+    
+    background-color: $color-class-d;
+    border-color: $color-class-d;
+   
+    &::after {
+        border-left-color: $color-class-d; 
+    }
+	&::before {
+		border-right-color: $body-background;
+	}
+}
+
+.classE {
+    @extend %qualityClasses;
+    
+    width:72px;
+    
+    background-color: $color-class-e;
+    border-color: $color-class-e;
+   
+    &::after {
+        border-left-color: $color-class-e; 
+    }
+	&::before {
+		border-right-color: $body-background;
+	}
+}
+
+.classF {
+    @extend %qualityClasses;
+    
+    width:79px;
+    
+    background-color: $color-class-f;
+    border-color: $color-class-f;
+   
+    &::after {
+        border-left-color: $color-class-f; 
+    }
+	&::before {
+		border-right-color: $body-background;
+	}
+}
+
+.classG {
+    @extend %qualityClasses;
+    
+    width:86px;
+    
+    background-color: $color-class-g;
+    border-color: $color-class-g;
+   
+    &::after {
+        border-left-color: $color-class-g; 
+    }
+	&::before {
+		border-right-color: $body-background;
+	}
+}
+
+.classX {
+    @extend %qualityClasses;
+    
+    width: 30px; // Adjust the width as needed
+    
+    background-color: #000000; // Set the desired background color
+    
+    // Set the distance from classAPlusPlus
+    margin-left: 100px; // Adjust the distance from classAPlusPlus
+    // Adjust the margin-left value according to your specific distance requirement
+    
+	// Set display to inline-block to appear on the same line
+    display: inline-block;
+	
+    &::after {
+        border-left-color: $body-background; // Match the background color
+    }
+	&::before {
+		border-right-color: #000000;
+	}
+}
+    
+.classAPlusPlus + .classX {
+    margin-left: 100px; // Adjust the distance between classAPlusPlus and classH
+}
