@@ -321,3 +321,33 @@ h2 {
         border-right-color: $color-class-x; 
     }
 }
+
+/* Input boxes definition*/
+
+.input-boxes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+label {
+    font: {
+        family: Arial, sans-serif;
+        size: 14px;
+        weight: 500;
+    }
+    margin-right: 10px;
+	margin-left: 10px;
+	margin: 10px 10px 5px 10px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font: {
+        family: Arial, sans-serif;
+        size: 14px;
+        weight: 350;
+    }
+}
