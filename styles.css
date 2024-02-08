@@ -351,3 +351,26 @@ input[type="text"] {
         weight: 350;
     }
 }
+
+/* Calculate button definition */
+
+#calculateButton {
+    margin: 20px 10px 10px 10px;
+    width: 150px; /* Adjust width as needed */
+    height: 40px; /* Adjust height as needed */
+    font: {
+        family: Arial, sans-serif;
+        size: 16px;
+        weight: 700;
+    }
+    background-color: #4CAF50; /* Change background color as needed */
+    color: white; /* Change text color as needed */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Apply border radius */
+    cursor: pointer; /* Show pointer cursor on hover */
+}
+
+#calculateButton:hover {
+    background-color: #45a049; /* Darken background color on hover */
+}
+
