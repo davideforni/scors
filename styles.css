@@ -293,6 +293,7 @@ h1 {
         size: 28px;
         weight: 500;
     }
+	bottom: -1000px;
     
     &::before {
     	content: "";		  	
@@ -312,7 +313,7 @@ h1 {
 
 .classX {
     @extend %qualityClass;
-    
+
     width:90px;
     
     background-color: $color-class-x;
