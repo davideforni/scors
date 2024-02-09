@@ -2,7 +2,7 @@
 
 /* Define variables for colors */
 
-$body-background: #f5efe6;
+$body-background: #fff;
 $color-class-a-plus-plus: #396433;
 $color-class-a-plus: #669e4c;
 $color-class-a: #afbe00;
@@ -332,35 +332,36 @@ h1 {
 
 label {
     font: {
-        family: Arial, sans-serif;
+        family: Helvetica;
         size: 20px;
         weight: 500;
     }
-    margin-right: 10px;
-	margin-left: 10px;
-	margin: 10px 10px 5px 10px;
+	margin: 10px 2.5px 5px 10px;
 }
 
 input[type="text"] {
-    padding: 10px;
+    padding: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font: {
-        family: Arial, sans-serif;
-        size: 14px;
+        family: Helvetica;
+        size: 20px;
         weight: 350;
     }
+	width: 150px;
+	margin: 10px 2.5px 5px 10px;
+	text-align: center;
 }
 
 /* Calculate button definition */
 
 #calculateButton {
-    margin: 20px 10px 10px 10px;
-    width: 150px; /* Adjust width as needed */
+    margin: 20px 10px 10px 195px;
+    width: 160px; /* Adjust width as needed */
     height: 40px; /* Adjust height as needed */
     font: {
-        family: Arial, sans-serif;
-        size: 16px;
+        family: Helvetica;
+        size: 20px;
         weight: 700;
     }
     background-color: #4CAF50; /* Change background color as needed */
