@@ -274,8 +274,8 @@ h1 {
 
 %qualityClass {
     position: relative;
-    display: block;
-    
+    display: flex;
+    margin-left: 314px;
     height: 36px;
     @include box-sizing('border-box');
     
