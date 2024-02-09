@@ -19,11 +19,33 @@ document.addEventListener("DOMContentLoaded", function() {
             // Perform the calculation and round up the result
             var result = Math.ceil(carbonValue / areaValue);
 
+            // Define quality class based on result
+            var qualityClass;
+            if (result < 50) {
+                qualityClass = "A<sup>++</sup>";
+            } else if (result < 100) {
+                qualityClass = "A<sup>+</sup>";
+            } else if (result < 150) {
+                qualityClass = "A";
+            } else if (result < 200) {
+                qualityClass = "B";
+            } else if (result < 250) {
+                qualityClass = "C";
+            } else if (result < 300) {
+                qualityClass = "D";
+            } else if (result < 350) {
+                qualityClass = "E";
+            } else if (result < 400) {
+                qualityClass = "F";
+            } else {
+                qualityClass = "G";
+            }
+
             // Display the result in the HTML
-            resultDiv.innerHTML = "Carbon Intensity = " + result + " kgCO<sub>2</sub>e/m<sup>2</sup>";
+            resultDiv.innerHTML = "Carbon Intensity: " + "<b>" + result + "</b>" + " kgCO<sub>2</sub>e/m<sup>2</sup> &rarr; Class " + "<b>" + qualityClass + "</b>";
         } else {
             // Display an error message if either field is empty or contains invalid input
-            resultDiv.innerHTML = "ERROR! Fill both input fields with valid numbers";
+            resultDiv.innerHTML = "<b>ERROR</b> - Fill both input fields with valid numbers!";
         }
     });
 });
