@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
 
             // Display the result in the HTML
-            resultDiv.innerHTML = "Carbon Intensity: " + "<b>" + result + "</b>" + " kgCO<sub>2</sub>e/m<sup>2</sup> &rarr; Class " + "<b>" + qualityClass + "</b>";
+            resultDiv.innerHTML = "Carbon Intensity: " + "<b>" + result + "</b>" + " kgCO<sub>2</sub>e/m<sup>2</sup> &rarr; Quality Class " + "<b>" + qualityClass + "</b>";
         } else {
             // Display an error message if either field is empty or contains invalid input
             resultDiv.innerHTML = "<b>ERROR</b> - Fill both input fields with valid numbers!";
