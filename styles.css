@@ -346,7 +346,7 @@ input[type="text"] {
     font: {
         family: Helvetica;
         size: 20px;
-        weight: 350;
+        weight: 500;
     }
 	width: 150px;
 	margin: 10px 2.5px 5px 10px;
@@ -357,7 +357,7 @@ input[type="text"] {
 
 #calculateButton {
     margin: 20px 10px 10px 195px;
-    width: 160px; /* Adjust width as needed */
+    width: 165px; /* Adjust width as needed */
     height: 40px; /* Adjust height as needed */
     font: {
         family: Helvetica;
@@ -373,4 +373,15 @@ input[type="text"] {
 
 #calculateButton:hover {
     background-color: #45a049; /* Darken background color on hover */
+}
+
+/* Result definition */
+
+.result {
+	margin: 10px 2.5px 5px 10px;
+    font: {
+        family: Helvetica;
+        size: 20px;
+        weight: 500;
+    }
 }
