@@ -45,11 +45,43 @@ document.addEventListener("DOMContentLoaded", function() {
             // Display the result in the HTML
             resultDiv.innerHTML = "Carbon Intensity: " + "<b>" + result + " kgCO<sub>2</sub>e/m<sup>2</sup></b> &rarr; Class " + "<b>" + qualityClass + "</b>";
 
+			// Update the bottom position based on qualityClass
+			var qualityClassBox = document.querySelector(".quality-class .classX");
+            switch (qualityClass) {
+                case "A<sup>++</sup>":
+                    qualityClassBox.style.top = "-360px";
+                    break;
+                case "A<sup>+</sup>":
+                    qualityClassBox.style.top = "-320px";
+                    break;
+                case "A":
+                    qualityClassBox.style.top = "-280px";
+                    break;
+                case "B":
+                    qualityClassBox.style.top = "-240px";
+                    break;
+                case "C":
+                    qualityClassBox.style.top = "-200px";
+                    break;
+                case "D":
+                    qualityClassBox.style.top = "-160px";
+                    break;
+                case "E":
+                    qualityClassBox.style.top = "-120px";
+                    break;
+                case "F":
+                    qualityClassBox.style.top = "-80px";
+                    break;
+                case "G":
+                    qualityClassBox.style.top = "-40px";
+                    break;
+            }
+
             // Display the quality class in the separate output
             qualityClassOutput.innerHTML = qualityClass;
         } else {
             // Display an error message if either field is empty or contains invalid input
-            resultDiv.innerHTML = "<b>ERROR</b> - Fill both input fields with valid numbers!";
+            resultDiv.innerHTML = "<b>WARNING!</b> Fill both input fields with valid numbers!";
             // Clear the quality class output if there's an error
             qualityClassOutput.innerHTML = "";
         }
