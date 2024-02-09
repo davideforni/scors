@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
             resultDiv.innerHTML = "Carbon Intensity = " + result + " kgCO<sub>2</sub>e/m<sup>2</sup>";
         } else {
             // Display an error message if either field is empty or contains invalid input
-            resultDiv.innerHTML = "ERROR - Fill both input fields with valid numbers!";
+            resultDiv.innerHTML = "ERROR! Fill both input fields with valid numbers";
         }
     });
 });
