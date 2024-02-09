@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var areaInput = document.getElementById("areaInput");
     var calculateButton = document.getElementById("calculateButton");
     var resultDiv = document.getElementById("result");
+    var qualityClassOutput = document.querySelector(".quality-class .classX");
 
     // Add click event listener to the Calculate button
     calculateButton.addEventListener("click", function(event) {
@@ -42,10 +43,15 @@ document.addEventListener("DOMContentLoaded", function() {
             }
 
             // Display the result in the HTML
-            resultDiv.innerHTML = "Carbon Intensity: " + "<b>" + result + "</b>" + " kgCO<sub>2</sub>e/m<sup>2</sup> &rarr; Quality Class " + "<b>" + qualityClass + "</b>";
+            resultDiv.innerHTML = "Carbon Intensity: " + "<b>" + result + " kgCO<sub>2</sub>e/m<sup>2</sup></b> &rarr; Class " + "<b>" + qualityClass + "</b>";
+
+            // Display the quality class in the separate output
+            qualityClassOutput.innerHTML = qualityClass;
         } else {
             // Display an error message if either field is empty or contains invalid input
             resultDiv.innerHTML = "<b>ERROR</b> - Fill both input fields with valid numbers!";
+            // Clear the quality class output if there's an error
+            qualityClassOutput.innerHTML = "";
         }
     });
 });
