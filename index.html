@@ -35,19 +35,15 @@
 
 
 <form>
-    <div class="input-boxes">
-        <label for="carbonInput">Carbon Footprint</label>        
+	<div class="input-boxes">
+		<label for="carbonInput">Carbon Footprint<font color="#fff">....</font></label> 
+        <input type="text" id="carbonInput">
+        <label for="carbonInput">kgCO<sub>2</sub>e</label>
     </div>
 	<div class="input-boxes">
-        <input type="text" id="carbonInput" placeholder="Enter a value...">
-        <label for="carbonInput"><i>kgCO<sub>2</sub>e</i></label>
-    </div>
-    <div class="input-boxes">
-        <label for="areaInput">Gross Internal Area</label>        
-    </div>
-	<div class="input-boxes">
-        <input type="text" id="areaInput" placeholder="Enter a value...">
-        <label for="areaInput"><i>m<sup>2</sup></i></label>
+		<label for="areaInput">Gross Internal Area</label>
+        <input type="text" id="areaInput">
+        <label for="areaInput">m<sup>2</sup></label>
     </div>
 	<button id="calculateButton">Calculate</button>
 
