@@ -31,6 +31,15 @@ h1 {
     color: #000;
 }
 
+p {
+    font: {
+      family: Helvetica;
+      size: 20px;
+    }
+    color: #000;
+}
+
+
 .container {
     position: relative;
 }
@@ -321,6 +330,21 @@ h1 {
    
     &::before {
         border-right-color: $color-class-x; 
+    }
+}
+
+/* Result output definition */
+
+.result-output {
+    position: absolute;
+    display: none; /* Initially hide the result output */
+    font-family: Helvetica;
+    font-size: 14px;
+    color: #000;
+	margin-left: -120px;
+	margin: {
+        top: -8px;
+        bottom: -4px;
     }
 }
 
