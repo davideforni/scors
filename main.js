@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var calculateButton = document.getElementById("calculateButton");
     var resultDiv = document.getElementById("result");
     var qualityClassOutput = document.querySelector(".quality-class .classX");
+	var resultOutput = document.getElementById("resultOutput");
 
     // Add click event listener to the Calculate button
     calculateButton.addEventListener("click", function(event) {
@@ -79,11 +80,24 @@ document.addEventListener("DOMContentLoaded", function() {
 
             // Display the quality class in the separate output
             qualityClassOutput.innerHTML = qualityClass;
+			
+			// Calculate position for result output
+            
+            var qualityClassBoxRect = qualityClassBox.getBoundingClientRect();
+            var resultOutputTop = qualityClassBoxRect.bottom - 10; // Offset from quality class box
+
+            // Set the content and position of the result output
+            resultOutput.style.top = resultOutputTop + "px";
+            resultOutput.style.left = qualityClassBoxRect.left + "px";
+            resultOutput.innerHTML = result + " kgCO<sub>2</sub>e/m<sup>2</sup>"; // Set the content of the resultOutput element with the result value
+            resultOutput.style.display = "block"; // Make the result output visible
         } else {
             // Display an error message if either field is empty or contains invalid input
             resultDiv.innerHTML = "<b>WARNING!</b> Fill both input fields with valid numbers!";
             // Clear the quality class output if there's an error
             qualityClassOutput.innerHTML = "";
+			// Hide the result output if there's an error
+            resultOutput.style.display = "none";
         }
     });
 });
