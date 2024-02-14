@@ -51,44 +51,46 @@ document.addEventListener("DOMContentLoaded", function() {
             switch (qualityClass) {
                 case "A<sup>++</sup>":
                     qualityClassBox.style.top = "-360px";
+					resultOutput.style.bottom = "355px";
                     break;
                 case "A<sup>+</sup>":
                     qualityClassBox.style.top = "-320px";
+					resultOutput.style.bottom = "315px";
                     break;
                 case "A":
                     qualityClassBox.style.top = "-280px";
+					resultOutput.style.bottom = "275px";
                     break;
                 case "B":
                     qualityClassBox.style.top = "-240px";
+					resultOutput.style.bottom = "235px";
                     break;
                 case "C":
                     qualityClassBox.style.top = "-200px";
-                    break;
+                    resultOutput.style.bottom = "195px";
+					break;
                 case "D":
                     qualityClassBox.style.top = "-160px";
+					resultOutput.style.bottom = "155px";
                     break;
                 case "E":
                     qualityClassBox.style.top = "-120px";
+					resultOutput.style.bottom = "115px";
                     break;
                 case "F":
                     qualityClassBox.style.top = "-80px";
+					resultOutput.style.bottom = "75px";
                     break;
                 case "G":
                     qualityClassBox.style.top = "-40px";
+					resultOutput.style.bottom = "35px";
                     break;
             }
 
             // Display the quality class in the separate output
             qualityClassOutput.innerHTML = qualityClass;
 			
-			// Calculate position for result output
-            
-            var qualityClassBoxRect = qualityClassBox.getBoundingClientRect();
-            var resultOutputTop = qualityClassBoxRect.bottom - 10; // Offset from quality class box
-
-            // Set the content and position of the result output
-            resultOutput.style.top = resultOutputTop + "px";
-            resultOutput.style.left = qualityClassBoxRect.left + "px";
+			// Show the result output
             resultOutput.innerHTML = result + " kgCO<sub>2</sub>e/m<sup>2</sup>"; // Set the content of the resultOutput element with the result value
             resultOutput.style.display = "block"; // Make the result output visible
         } else {
