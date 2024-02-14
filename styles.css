@@ -336,14 +336,14 @@ p {
 /* Result output definition */
 
 .result-output {
-    position: absolute;
+    position: relative;
     display: none; /* Initially hide the result output */
     font-family: Helvetica;
     font-size: 14px;
     color: #000;
-	margin-left: -120px;
+	margin-left: 296px;
 	margin: {
-        top: -8px;
+        top: -6px;
         bottom: -4px;
     }
 }
