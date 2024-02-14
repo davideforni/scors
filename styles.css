@@ -42,7 +42,13 @@ p {
 
 .container {
     position: relative;
+	text-align: center; /* Center-align the content */
+    max-width: 404px; /* Adjust this value to your desired distance in pixels */
 }
+
+.container h1 {
+        margin-top: -20px; /* Adjust this value to control the space between the h1 and the paragraph */
+    }
 
 /* Vertical axis definition */
 
