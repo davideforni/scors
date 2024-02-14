@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
 
             // Display the result in the HTML
-            resultDiv.innerHTML = "Carbon Intensity: " + "<b>" + result + " kgCO<sub>2</sub>e/m<sup>2</sup></b> &rarr; Class " + "<b>" + qualityClass + "</b>";
+            resultDiv.innerHTML = "Carbon Intensity = " + "<b>" + result + " kgCO<sub>2</sub>e/m<sup>2</sup></b> &rarr; Class " + "<b>" + qualityClass + "</b>";
 
 			// Update the bottom position based on qualityClass
 			var qualityClassBox = document.querySelector(".quality-class .classX");
